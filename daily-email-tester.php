@@ -104,10 +104,10 @@ function dailytester_register_settings() {
 // Send email function
 function dailytester_send_email( $interactive = false ) {
     if( $interactive ){
-        $subject = 'Message from Daily Email Tester (manual)';
+        $subject = 'Daily test message from '. get_bloginfo( 'name' ) . ' (manual)';
         $message = 'This is a manually-initiated test email from the Daily Email Tester.';
     } else {
-        $subject = 'Message from Daily Email Tester (automatic)';
+        $subject = 'Daily test message from '. get_bloginfo( 'name' ) . ' (automatic)';
         $message = 'This is a daily test email from the Daily Email Tester.';
         error_log( '[Daily Email Tester] Sending daily test email' );
     }
