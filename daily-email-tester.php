@@ -109,7 +109,9 @@ function dailytester_send_email( $interactive = false ) {
     } else {
         $subject = 'Daily test message from '. get_bloginfo( 'name' ) . ' (automatic)';
         $message = 'This is a daily test email from the Daily Email Tester.';
-        error_log( '[Daily Email Tester] Sending daily test email' );
+        if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+            error_log( '[Daily Email Tester] Sending daily test email' );
+        }
     }
 
     $to = get_option( 'dailytester_email_address' );
