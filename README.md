@@ -7,4 +7,6 @@ The plugin sets up a configuration screen at Tools > Daily Email Tester which al
 1. Setting the email address to which test emails will be sent daily.
 2. Triggering a test email manually, which is useful when initially setting up the plugin
 
+If the debug.log is activated, the plugin will write a daily entry to it when it runs. [See here](https://deliciousbrains.com/why-use-wp-debug-log-wordpress-development/) about managing your debug.log.
+
 The plugin was created by [nanoPost - The Wordpress Email Authority](https://nanopo.st)
