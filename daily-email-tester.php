@@ -103,18 +103,20 @@ function dailytester_register_settings() {
 
 // Send email function
 function dailytester_send_email( $interactive = false ) {
-    if( $interactive ){
+  
+  $to = get_option( 'dailytester_email_address' );
+  
+  if( $interactive ){
         $subject = 'Daily test message from '. get_bloginfo( 'name' ) . ' (manual)';
         $message = 'This is a manually-initiated test email from the Daily Email Tester.';
     } else {
         $subject = 'Daily test message from '. get_bloginfo( 'name' ) . ' (automatic)';
         $message = 'This is a daily test email from the Daily Email Tester.';
         if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-            error_log( '[Daily Email Tester] Sending daily test email' );
+            error_log( '[Daily Email Tester] Sending daily test email to ' . $to );
         }
     }
-
-    $to = get_option( 'dailytester_email_address' );
+  
     $headers = array( 'Content-Type: text/html; charset=UTF-8' );
 
     // Send email
