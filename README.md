@@ -9,4 +9,4 @@ The plugin sets up a configuration screen at Tools > Daily Email Tester which al
 
 If the debug.log is activated, the plugin will write a daily entry to it when it runs. [See here](https://deliciousbrains.com/why-use-wp-debug-log-wordpress-development/) about managing your debug.log.
 
-The plugin was created by [nanoPost - The Wordpress Email Authority](https://nanopo.st)
+The plugin was created by [nanoPost](https://nanopo.st) - The Wordpress Email Authority
